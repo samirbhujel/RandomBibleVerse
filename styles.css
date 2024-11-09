@@ -1,0 +1,160 @@
+/* General Styling */
+body {
+  font-family: 'Comfortaa', sans-serif; /* Default font for body text */
+  background: linear-gradient(to bottom, #2a2a2a, #3b3b3b); /* Gradient background */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  animation: backgroundAnimation 10s ease-in-out infinite; /* Faster background animation */
+}
+
+/* Container for content */
+.container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  padding: 40px 50px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.8);
+  width: 90%;
+  max-width: 700px;
+  animation: fadeIn 1s ease-out;
+  backdrop-filter: blur(10px); /* Subtle blur for better opacity effect */
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Title (H1) Styling */
+h1 {
+  font-family: 'Cassandra', serif; /* Cassandra for title */
+  font-size: 3.5em;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #ffcc00; /* Gold for the title */
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 1.5s ease-out;
+  transform: translateY(-20px);
+}
+
+/* Verse Styling */
+#verse {
+  font-family: 'Comfortaa', sans-serif; /* Comfortaa Light for the verse text */
+  font-size: 1.6em;
+  margin-bottom: 30px;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: fadeIn 1.5s forwards; /* Faster fade-in */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Verse Reference Styling */
+#verse i {
+  color: #ffcc00; /* Gold color for the reference */
+  font-style: italic;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards 1s; /* Faster fade-in for reference */
+}
+
+/* Button Styling */
+button {
+  background-color: #ffcc00;
+  color: #333;
+  font-size: 1.2em;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-out; /* Faster transition for hover */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 1.5s ease-out 1s;
+  transform: scale(1.05);
+}
+
+/* Button Hover Effects */
+button:hover {
+  background-color: #e6b800; /* Darker gold on hover */
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Animation: Fade In Effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Background Animation */
+@keyframes backgroundAnimation {
+  0% {
+    background: linear-gradient(to bottom, #2a2a2a, #3b3b3b);
+  }
+  50% {
+    background: linear-gradient(to bottom, #3b3b3b, #2a2a2a);
+  }
+  100% {
+    background: linear-gradient(to bottom, #2a2a2a, #3b3b3b);
+  }
+}
+
+/* Random Animations for Container */
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  body {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  #verse {
+    font-size: 1.3em;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 12px 25px;
+  }
+}
